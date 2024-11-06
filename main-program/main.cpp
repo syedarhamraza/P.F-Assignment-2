@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-int paymentmethod(int payment_method, double total_with_shipping);
+double paymentmethod(int payment_method, double total_with_shipping);
 double customertype(double total_after_transactionfee, int customer_type);
 double couponDiscount(string couponCode, double totalAfterVipDiscount);
 double locationTax(int location, double totalAfterCoupon);
@@ -90,7 +90,7 @@ int main()
     return 0;
 }
 
-int paymentmethod(int payment_method, double total_with_shipping)
+double paymentmethod(int payment_method, double total_with_shipping)
 {
     double total_after_transactionfee = 0;
     if (payment_method == 1)
