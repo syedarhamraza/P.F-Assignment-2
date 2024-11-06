@@ -136,7 +136,6 @@ double couponDiscount(string couponCode, double totalAfterVipDiscount)
 double locationTax(int location, double totalAfterCoupon)
 {
     double taxRate = 0;
-    double totalWithTax = 0;
     if (location == 1)
     {
         taxRate = 0.05;
@@ -149,7 +148,7 @@ double locationTax(int location, double totalAfterCoupon)
     {
         taxRate = 0.08;
     }
-    return totalWithTax = totalAfterCoupon * (1 + taxRate);
+    return totalAfterCoupon * (1 + taxRate);
 }
 
 void displayOutputs(int priceOfLcd, int priceOfMobile, int priceOfDesktop, int quantityOfLcd, int quantityOfMobile, int quantityOfDesktop, double total, double finalTotal, double shipping, double transactionFee, double vipDiscount, double couponDiscount, double salesTax, double totalAfterTax, int loyaltyPoints)
