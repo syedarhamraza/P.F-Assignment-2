@@ -1,4 +1,4 @@
-// task1
+// task2
 #include <iostream>
 using namespace std;
 
@@ -17,7 +17,13 @@ int main()
     cin >> quantityOfDesktop;
 
     double total = (priceOfLcd * quantityOfLcd) + (priceOfMobile * quantityOfMobile) + (priceOfDesktop * quantityOfDesktop);
-    cout << "Total Price: $" << total << endl;
+    double finalTotal = (total > 3600) ? total * 0.9 : total;
+    double shipping = (finalTotal <= 2000) ? 15.0 : 0.0;
+    double totalWithShipping = finalTotal + shipping;
+    int loyaltyPoints = (totalWithShipping > 2000) ? 50 : 20;
+
+    cout << "Total after discount and shipping: $" << totalWithShipping << endl;
+    cout << "Loyalty points earned: " << loyaltyPoints << endl;
 
     return 0;
 }
