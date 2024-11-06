@@ -13,8 +13,8 @@ int main()
     int priceOfLcd = 350;
     int priceOfMobile = 750;
     int priceOfDesktop = 2500;
-    int stockOfLcd = 10, stockOfMobile = 5, stockOfDesktop = 8;
-    int quantityOfLcd, quantityOfMobile, quantityOfDesktop;
+    int stockOfLcd = 8, stockOfMobile = 15, stockOfDesktop = 5;
+    int quantityOfLcd = 0, quantityOfMobile = 0, quantityOfDesktop = 0;
     int paymentMethod = 0;
     double totalAfterTransactionFee = 0;
     int customerType = 0;
@@ -28,6 +28,9 @@ int main()
     int location = 0;
     string couponCode;
 
+    cout << "**********************************************************" << endl;
+    cout << "********************E-Commerce Store**********************" << endl;
+    cout << "**********************************************************" << endl;
     cout << "Enter the quantity of LCD you want to buy (each is $350): ";
     cin >> quantityOfLcd;
     if (quantityOfLcd > stockOfLcd)
@@ -162,5 +165,5 @@ void displayOutputs(int priceOfLcd, int priceOfMobile, int priceOfDesktop, int q
     cout << "Coupon Discount: $" << couponDiscount << endl;
     cout << "Sales Tax: $" << salesTax << endl;
     cout << "Total Payable Amount: $" << totalAfterTax << endl;
-    cout << "Loyalty Points Gained: " << loyaltyPoints << endl;
+    cout << "Loyalty Points Earned: " << loyaltyPoints << endl;
 }
