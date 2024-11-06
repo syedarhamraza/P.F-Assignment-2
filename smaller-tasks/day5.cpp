@@ -22,7 +22,7 @@ int main()
     double totalWithShipping = finalTotal + shipping;
     int loyaltyPoints = (totalWithShipping > 2000) ? 50 : 20;
 
-    cout << "Total after discount and shipping: $" << totalWithShipping << " " << finalTotal << endl;
+    cout << "Total after discount and shipping: $" << totalWithShipping << endl;
     cout << "Loyalty points earned: " << loyaltyPoints << endl;
 
     return 0;
